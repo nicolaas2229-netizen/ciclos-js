@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 7 · Nómina de empleados</title>
+</head>
+<body>
+  <header>
+    <a href="index.html">← Volver al menú</a>
+    <h1>Ejercicio 7: Nómina de empleados</h1>
+    <p id="etiquetas">Ciclo for · Acumuladores · Condiciones</p>
+  </header>
+
+  <main>
+    <section id="enunciado">
+      <h2>Enunciado</h2>
+      <p>Una empresa necesita calcular el pago de sus empleados a partir de las horas trabajadas y el valor de la hora.</p>
+      <ul>
+        <li>Ingresar un empleado por línea con el formato: horas, valor por hora.</li>
+        <li>Validar que las horas y el valor por hora sean mayores a cero.</li>
+        <li>Pagar las primeras 40 horas con el valor normal.</li>
+        <li>Pagar las horas adicionales con un recargo del 25 %.</li>
+        <li>Calcular el total de la nómina y cuántos empleados tuvieron horas extras.</li>
+      </ul>
+    </section>
+
+    <section id="controles">
+      <form id="formulario">
+        <label for="empleadosEntrada">Un empleado por línea (horas, valor por hora):</label>
+        <textarea id="empleadosEntrada" rows="5" placeholder="40, 15000&#10;45, 20000&#10;30, 12000" required></textarea>
+        <button type="submit">Calcular nómina</button>
+      </form>
+    </section>
+
+    <section id="resultado" aria-live="polite">
+      <h2>Resultados</h2>
+      <p id="mensaje">Aún no hay datos. Presiona el botón para comenzar.</p>
+      <ul id="detalleEmpleados"></ul>
+      <p>Cantidad de empleados: <strong id="cantidadEmpleados">—</strong></p>
+      <p>Empleados con horas extras: <strong id="conExtras">—</strong></p>
+      <p>Total de la nómina: <strong id="totalNomina">—</strong></p>
+    </section>
+  </main>
+
+  <script src="js/ejercicio7.js"></script>
+</body>
+</html>
